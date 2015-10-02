@@ -1,6 +1,6 @@
 {
   "name": "app-boot",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Boot an application.",
   "author": {
     "name": "Athan Reines",

@@ -148,7 +148,7 @@ boot( done );
 
 ## See Also
 
-*	[parallel-boot-phase](https://github.com/kgryte/parallel-boot-phase)
+*	[parallel-boot-phase](https://github.com/kgryte/node-parallel-boot-phase)
 	-	Creates a parallel boot phase when booting an application. Useful for when phase functions are independent; e.g., connecting to two separate databases which do not share any dependencies.
 * 	[bootable](https://github.com/jaredhanson/bootable)
 	-	Whereas `bootable` binds an application to the phase `this` context, this module allows passing the application and any other parameters as arguments to each phase.

@@ -149,7 +149,9 @@ boot( done );
 ## See Also
 
 *	[parallel-boot-phase](https://github.com/kgryte/node-parallel-boot-phase)
-	-	Creates a parallel boot phase when booting an application. Useful for when phase functions are independent; e.g., connecting to two separate databases which do not share any dependencies.
+	-	Creates a parallel boot phase when booting an application. Useful for when phase functions are independent; e.g., connecting to two mutually exclusive databases.
+*	[series-boot-phase](https://github.com/kgryte/node-series-boot-phase)
+	-	Creates a series boot phase containing subphases when booting an application. Useful for phase abstraction; e.g., creating a higher-level middleware phase from several subphases (initial tasks, routes, error handling, etc).
 * 	[bootable](https://github.com/jaredhanson/bootable)
 	-	Whereas `bootable` binds an application to the phase `this` context, this module allows passing the application and any other parameters as arguments to each phase.
 	-	Rather than hang methods off (and thus mutate) the application, this module returns a `function` which wraps the application in a closure.

@@ -32,7 +32,8 @@
     "phase",
     "run",
     "boot order",
-    "start"
+    "start",
+    "server"
   ],
   "bugs": {
     "url": "https://github.com/kgryte/node-app-boot/issues"

@@ -1,0 +1,56 @@
+{
+  "name": "app-boot",
+  "version": "0.0.0",
+  "description": "Boot an application.",
+  "author": {
+    "name": "Athan Reines",
+    "email": "kgryte@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Athan Reines",
+      "email": "kgryte@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+  },
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kgryte/node-app-boot.git"
+  },
+  "keywords": [
+    "application",
+    "app",
+    "boot",
+    "bootable",
+    "sequence",
+    "express",
+    "phase",
+    "run",
+    "boot order",
+    "start"
+  ],
+  "bugs": {
+    "url": "https://github.com/kgryte/node-app-boot/issues"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "utils-function-name": "^1.0.0",
+    "utils-try-function": "^1.0.0",
+    "validate.io-function": "^1.0.2"
+  },
+  "devDependencies": {
+    "chai": "3.x.x",
+    "codecov.io": "^0.1.5",
+    "express": "^4.13.3",
+    "istanbul": "^0.3.0",
+    "jshint": "2.x.x",
+    "jshint-stylish": "2.x.x",
+    "mocha": "2.x.x"
+  },
+  "license": "MIT"
+}

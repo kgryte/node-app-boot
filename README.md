@@ -20,7 +20,7 @@ var bootable = require( 'app-boot' );
 
 #### bootable( [...args] )
 
-Returns a boot `function`. Any provided `arguments` are passed to each registered phase. 
+Returns a boot `function`. All provided `arguments` are passed to each registered phase. 
 
 ``` javascript
 var app = require( 'express' )();
@@ -148,8 +148,8 @@ boot( done );
 
 ## See Also
 
-* 	[bootable](https://github.com/jaredhanson/bootable). Differences are as follows:
-	-	Instead of binding an application to the phase `this` context, this module allows passing the application and any other parameters as arguments to each phase.
+* 	[bootable](https://github.com/jaredhanson/bootable)
+	-	Whereas `bootable` binds an application to the phase `this` context, this module allows passing the application and any other parameters as arguments to each phase.
 	-	Rather than hang methods off (and thus mutate) the application, this module returns a `function` which wraps the application in a closure.
 *	[express](https://github.com/strongloop/express)
 	-	Similar to Express' middleware pattern, but with a more general interface. 
@@ -222,7 +222,7 @@ boot( onReady );
 To run the example code from the top-level application directory,
 
 ``` bash
-$ node ./examples/index.js
+$ DEBUG=* node ./examples/index.js
 ```
 
 

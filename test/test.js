@@ -197,4 +197,30 @@ describe( 'app-boot', function tests() {
 		}
 	});
 
+	it( 'should support any number of boot arguments', function test( done ) {
+		var boot,
+			opts;
+
+		opts = {};
+		boot = bootable( app, opts, opts, opts, opts );
+		boot.phase( phase );
+		boot( clbk );
+
+		function phase() {
+			var len = arguments.length,
+				i;
+
+			for ( i = 1; i < len-1; i++ ) {
+				assert.strictEqual( arguments[ i ], opts );
+			}
+			arguments[ len-1 ]();
+		}
+		function clbk( error ) {
+			if ( error ) {
+				assert.ok( false );
+			}
+			done();
+		}
+	});
+
 });
